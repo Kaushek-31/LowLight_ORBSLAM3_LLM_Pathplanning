@@ -1,0 +1,86 @@
+environment_data_provider:
+  ros__parameters:
+    environment_width: 100.0
+    environment_length: 100.0
+
+    target_objects:
+      - name: trash_can
+        position: {x: -6.98754, y: 8.09739, z: 0.0}
+        size:
+          source: mesh
+          scale: [1.0, 1.0, 1.0]
+          note: "Dimensions from mesh file: trash_can.dae"
+        semantic_label: target_zone
+
+      - name: Mailbox
+        position: {x: 7.01026, y: 6.03676, z: 0.0}
+        size:
+          source: mesh
+          scale: [1.0, 1.0, 1.0]
+          note: "Dimensions from mesh file: mailbox.dae"
+        semantic_label: target_zone
+
+      - name: bookshelf
+        position: {x: 6.52362, y: 1.68604, z: 0.0}
+        size:
+          width: 0.9
+          length: 0.4
+          height: 1.2
+        semantic_label: target_zone
+
+      - name: fountain
+        position: {x: 0.11572, y: 0.123182, z: 0.0}
+        size:
+          source: mesh
+          scale: [1.0, 1.0, 1.0]
+          note: "Dimensions from mesh file: fountain.dae"
+        semantic_label: target_zone
+
+    obstacles:
+      - name: table_marble
+        position: {x: 6.29182, y: -5.51511, z: 0.648}
+        size:
+          source: mesh
+          scale: [0.25, 0.25, 0.25]
+          note: "Dimensions from mesh file: table_lightmap.dae"
+        semantic_label: furniture
+
+      - name: shelf
+        position: {x: 0.070788, y: -8.80801, z: 0.0}
+        size:
+          width: 3.6
+          length: 0.6
+          height: 1.8
+        semantic_label: storage_unit
+
+      - name: cardboard_box
+        position: {x: -6.0686, y: 8.10948, z: 0.15}
+        size:
+          width: 0.5
+          length: 0.4
+          height: 0.3
+        semantic_label: movable_obstacle
+
+      - name: ladder
+        position: {x: -2.53944, y: 7.33102, z: 0.0}
+        size:
+          width: 1.0
+          length: 2.0
+          height: 2.5
+        semantic_label: equipment
+
+      - name: Chair
+        position: {x: 4.85478, y: -5.65442, z: 0.0}
+        size:
+          source: mesh
+          scale: [0.00817, 0.00817, 0.00817]
+          note: "Dimensions from Chair.obj on Ignition Fuel"
+        semantic_label: furniture
+
+      - name: trisphere_cycle
+        position: {x: -4.88361, y: -1.49504, z: 0.0}
+        size:
+          width: 1.1
+          length: 1.8
+          height: 1.1
+        semantic_label: equipment
