@@ -1,0 +1,63 @@
+%YAML:1.0
+
+
+# If the LoadFile doesn't exist, the system give a message and create a new Atlas from scratch
+#System.LoadAtlasFromFile: "bcr_bot_rob530"
+
+# The store file is created from the current session, if a file with the same name exists it is deleted
+System.SaveAtlasToFile: "bcr_bot_rob530"
+
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters
+#--------------------------------------------------------------------------------------------
+Camera.type: "PinHole"
+
+# Intrinsics
+Camera.fx: 528.433756558
+Camera.fy: 528.433756558
+Camera.cx: 320.5
+Camera.cy: 240.5
+
+# Distortion Coefficients (k1, k2, p1, p2)
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+# Image resolution
+Camera.width: 640
+Camera.height: 480
+
+# Camera frame rate
+Camera.fps: 30.0
+
+# RGB (set to 1 if your image is in RGB, 0 if BGR)
+Camera.RGB: 1
+
+# Image scale (keep as 1.0 unless you're resizing input images)
+Camera.imageScale: 1.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+ORBextractor.nFeatures: 1500
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+Viewer.imageViewScale: 2

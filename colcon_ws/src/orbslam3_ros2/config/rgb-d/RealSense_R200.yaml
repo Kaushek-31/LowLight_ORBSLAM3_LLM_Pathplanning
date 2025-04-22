@@ -1,0 +1,87 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjusted based on calibration data
+#--------------------------------------------------------------------------------------------
+Camera.type: "PinHole"
+
+# Camera intrinsics (fx, fy, cx, cy) for RealSense R200
+Camera.fx: 1696.802685832259
+Camera.fy: 1696.802685832259
+Camera.cx: 960.5
+Camera.cy: 540.5
+
+# Distortion parameters (assuming no distortion)
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+# Camera resolution
+Camera.width: 1920
+Camera.height: 1080
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Image scale, changes the image size to be processed (<1.0: reduce, >1.0: increase)
+Camera.imageScale: 1.0
+
+# Close/Far threshold. Baseline times.
+ThDepth: 400.0
+
+# Stereo baseline times fx
+Camera.bf: 70.0  # Approximate value, adjust based on actual baseline
+
+# Depth map values factor
+DepthMapFactor: 1000.0
+
+#--------------------------------------------------------------------------------------------
+# Transformation from body-frame (IMU) to left camera
+#--------------------------------------------------------------------------------------------
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [1.0, 0.0, 0.0, -0.005,
+          0.0, 1.0, 0.0, -0.005,
+          0.0, 0.0, 1.0,  0.0117,
+          0.0, 0.0, 0.0,  1.0]
+
+# Do not insert KeyFrames when recently lost
+InsertKFsWhenLost: 0
+
+#--------------------------------------------------------------------------------------------
+# IMU Parameters
+#--------------------------------------------------------------------------------------------
+IMU.NoiseGyro: 1e-3  # rad/s^0.5
+IMU.NoiseAcc: 1e-2   # m/s^1.5
+IMU.GyroWalk: 1e-6   # rad/s^1.5
+IMU.AccWalk: 1e-4    # m/s^2.5
+IMU.Frequency: 200
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+ORBextractor.nFeatures: 1250
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500

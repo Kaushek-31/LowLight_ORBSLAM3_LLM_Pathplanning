@@ -1,0 +1,89 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+Camera.type: "PinHole"
+
+# Camera Calibration Parameters (OpenCV)
+Camera.fx: 615.0  # Focal length in the x direction
+Camera.fy: 615.0  # Focal length in the y direction
+Camera.cx: 640.0  # Optical center (x coordinate)
+Camera.cy: 360.0  # Optical center (y coordinate)
+
+# Distortion parameters (Set to 0 since it's ideal in your case)
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+# Camera resolution (adjusted as per Intel RealSense R200)
+Camera.width: 1280  # Standard HD resolution
+Camera.height: 720
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# Color order of the images (0: BGR, 1: RGB. Since you're using BGR images, we assume RGB = 0)
+Camera.RGB: 0  # BGR color order
+
+# Image scale (to reduce image size for processing, if needed)
+Camera.imageScale: 1.0  # No scaling applied
+
+# Depth parameters
+# Depthmap values factor
+DepthMapFactor: 1000.0
+
+# Near and Far clipping planes for depth (in meters)
+DepthClipNear: 0.02
+DepthClipFar: 300.0
+
+# Transformation from body-frame (imu) to camera (assuming no IMU)
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [1.0, 0.0, 0.0, -0.005,  # Transformation matrix for camera
+          0.0, 1.0, 0.0, -0.005,
+          0.0, 0.0, 1.0,  0.0117,
+          0.0, 0.0, 0.0,  1.0]
+
+#--------------------------------------------------------------------------------------------
+# IMU Parameters (If applicable to the monocular-IMU system)
+#--------------------------------------------------------------------------------------------
+IMU.NoiseGyro: 1e-2  # Gyro noise (rad/s^0.5)
+IMU.NoiseAcc: 1e-1  # Accelerometer noise (m/s^1.5)
+IMU.GyroWalk: 1e-6  # Gyro random walk (rad/s^1.5)
+IMU.AccWalk: 1e-4  # Accelerometer random walk (m/s^2.5)
+IMU.Frequency: 200  # IMU frequency (Hz)
+
+#--------------------------------------------------------------------------------------------
+# ORB Extractor Parameters
+#--------------------------------------------------------------------------------------------
+ORBextractor.nFeatures: 1250  # Number of ORB features to extract per image
+ORBextractor.scaleFactor: 1.2  # Scale factor between pyramid levels
+ORBextractor.nLevels: 8  # Number of levels in the pyramid
+ORBextractor.iniThFAST: 20  # Initial threshold for FAST feature detection
+ORBextractor.minThFAST: 7   # Minimum threshold for FAST feature detection
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05  # Size of the keyframes in the viewer
+Viewer.KeyFrameLineWidth: 1  # Line width for keyframes in the viewer
+Viewer.GraphLineWidth: 0.9  # Line width for graph in the viewer
+Viewer.PointSize: 2  # Size of points in the viewer
+Viewer.CameraSize: 0.08  # Size of camera model in the viewer
+Viewer.CameraLineWidth: 3  # Line width for camera model in the viewer
+Viewer.ViewpointX: 0  # Camera viewpoint position (X)
+Viewer.ViewpointY: -0.7  # Camera viewpoint position (Y)
+Viewer.ViewpointZ: -3.5  # Camera viewpoint position (Z)
+Viewer.ViewpointF: 500  # Camera viewpoint focal length
+
+#--------------------------------------------------------------------------------------------
+# Additional Parameters
+#--------------------------------------------------------------------------------------------
+ThDepth: 40.0  # Depth threshold for certain processing
+
+Camera.bf: 46.01  # Stereo baseline times focal length (used for depth estimation)
+

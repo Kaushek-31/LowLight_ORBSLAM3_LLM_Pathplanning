@@ -1,0 +1,38 @@
+[0.008s] Invoking command in '/home/kaushek/MRob/colcon_ws/src/orbslam3_ros2/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(orbslam3) /usr/local/bin/cmake /home/kaushek/MRob/colcon_ws/src/orbslam3_ros2 -DTINYXML2_LIBRARY=/usr/lib/x86_64-linux-gnu/libtinyxml2.so -DTINYXML2_INCLUDE_DIR=/usr/include -DOPENGL_INCLUDE_DIR=/usr/include/GL -DOPENGL_LIBRARIES=/usr/lib/x86_64-linux-gnu/libOpenGL.so -DEGL_INCLUDE_DIR=/usr/include/EGL -DEGL_LIBRARY=/usr/lib/x86_64-linux-gnu/libEGL.so -Dspdlog_DIR=/usr/lib/x86_64-linux-gnu/cmake/spdlog -DOpenCV_DIR=/usr/lib/x86_64-linux-gnu/cmake/opencv4 -DOPENGL_opengl_LIBRARY=/usr/lib/x86_64-linux-gnu/libOpenGL.so -DOPENGL_INCLUDE_DIR=/usr/include -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kaushek/MRob/colcon_ws/src/orbslam3_ros2/install/orbslam3
+[0.025s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.188s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.211s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.269s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.277s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.295s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.327s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.367s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.461s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.465s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.616s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.754s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.829s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.861s] -- Found message_filters: 4.3.6 (/opt/ros/humble/share/message_filters/cmake)
+[0.887s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+[0.891s] -- Found ORB_SLAM3: /home/kaushek/MRob/ORB_SLAM3/lib/libORB_SLAM3.so  
+[0.904s] -- Found OpenCV: /usr (found suitable version "4.5.4", minimum required is "4.4") 
+[0.909s] CMake Error at CMakeLists.txt:28 (find_package):
+[0.909s]   By not providing "FindEGL.cmake" in CMAKE_MODULE_PATH this project has
+[0.909s]   asked CMake to find a package configuration file provided by "EGL", but
+[0.909s]   CMake did not find one.
+[0.910s] 
+[0.910s]   Could not find a package configuration file provided by "EGL" with any of
+[0.910s]   the following names:
+[0.910s] 
+[0.910s]     EGLConfig.cmake
+[0.910s]     egl-config.cmake
+[0.910s] 
+[0.910s]   Add the installation prefix of "EGL" to CMAKE_PREFIX_PATH or set "EGL_DIR"
+[0.910s]   to a directory containing one of the above files.  If "EGL" provides a
+[0.910s]   separate development package or SDK, be sure it has been installed.
+[0.910s] 
+[0.910s] 
+[0.911s] -- Configuring incomplete, errors occurred!
+[0.911s] See also "/home/kaushek/MRob/colcon_ws/src/orbslam3_ros2/build/orbslam3/CMakeFiles/CMakeOutput.log".
+[0.911s] See also "/home/kaushek/MRob/colcon_ws/src/orbslam3_ros2/build/orbslam3/CMakeFiles/CMakeError.log".
+[0.918s] Invoked command in '/home/kaushek/MRob/colcon_ws/src/orbslam3_ros2/build/orbslam3' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(orbslam3) /usr/local/bin/cmake /home/kaushek/MRob/colcon_ws/src/orbslam3_ros2 -DTINYXML2_LIBRARY=/usr/lib/x86_64-linux-gnu/libtinyxml2.so -DTINYXML2_INCLUDE_DIR=/usr/include -DOPENGL_INCLUDE_DIR=/usr/include/GL -DOPENGL_LIBRARIES=/usr/lib/x86_64-linux-gnu/libOpenGL.so -DEGL_INCLUDE_DIR=/usr/include/EGL -DEGL_LIBRARY=/usr/lib/x86_64-linux-gnu/libEGL.so -Dspdlog_DIR=/usr/lib/x86_64-linux-gnu/cmake/spdlog -DOpenCV_DIR=/usr/lib/x86_64-linux-gnu/cmake/opencv4 -DOPENGL_opengl_LIBRARY=/usr/lib/x86_64-linux-gnu/libOpenGL.so -DOPENGL_INCLUDE_DIR=/usr/include -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kaushek/MRob/colcon_ws/src/orbslam3_ros2/install/orbslam3

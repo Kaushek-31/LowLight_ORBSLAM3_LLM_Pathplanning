@@ -1,0 +1,4 @@
+Invoking command in '/home/colcon_ws/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --build /home/colcon_ws/build/orbslam3 -- -j16 -l16
+Invoked command in '/home/colcon_ws/build/orbslam3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --build /home/colcon_ws/build/orbslam3 -- -j16 -l16
+Invoking command in '/home/colcon_ws/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --install /home/colcon_ws/build/orbslam3
+Invoked command in '/home/colcon_ws/build/orbslam3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --install /home/colcon_ws/build/orbslam3

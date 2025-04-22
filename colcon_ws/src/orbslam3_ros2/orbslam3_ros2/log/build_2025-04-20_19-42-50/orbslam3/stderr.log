@@ -1,0 +1,10 @@
+CMake Error at /usr/local/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+  Could NOT find OpenGL (missing: OPENGL_opengl_LIBRARY OpenGL)
+Call Stack (most recent call first):
+  /usr/local/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+  /usr/local/share/cmake-3.16/Modules/FindOpenGL.cmake:397 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  /usr/local/share/cmake-3.16/Modules/CMakeFindDependencyMacro.cmake:47 (find_package)
+  /usr/local/lib/cmake/Pangolin/PangolinConfig.cmake:21 (find_dependency)
+  CMakeLists.txt:24 (find_package)
+
+

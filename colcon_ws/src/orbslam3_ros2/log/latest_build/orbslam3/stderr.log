@@ -1,0 +1,15 @@
+gmake[2]: *** [CMakeFiles/stereo.dir/build.make:76: CMakeFiles/stereo.dir/src/stereo/stereo.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/mono.dir/build.make:76: CMakeFiles/mono.dir/src/monocular/mono.cpp.o] Interrupt
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** [CMakeFiles/rgbd.dir/build.make:76: CMakeFiles/rgbd.dir/src/rgbd/rgbd.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/rgbd.dir/build.make:90: CMakeFiles/rgbd.dir/src/rgbd/rgbd-slam-node.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/stereo-inertial.dir/build.make:76: CMakeFiles/stereo-inertial.dir/src/stereo-inertial/stereo-inertial.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/stereo-inertial.dir/build.make:90: CMakeFiles/stereo-inertial.dir/src/stereo-inertial/stereo-inertial-node.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/stereo.dir/build.make:90: CMakeFiles/stereo.dir/src/stereo/stereo-slam-node.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/mono.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/rgbd.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/stereo.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/stereo-inertial.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

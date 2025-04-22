@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+import torch
+import torchvision.transforms as transforms
+import numpy as np
+from PIL import Image as PILImage
+import os
+import time
+import sys
+
+sys.path.append("/home/kaushek/MRob/colcon_ws/thirdparty/dpec_vm")
+
+from Best_module.VMLL import net  # Make sure this is in PYTHONPATH
+import cv2
+
+class ImageEnhancer(Node):
+    def __init__(self):
+        super().__init__('image_enhancer')
+        self.bridge = CvBridge()
+
+        # Subscribe to raw image topic
+        self.subscription = self.create_subscription(
+            Image,
+            '/bcr_bot/kinect_camera/image_raw',
+            self.listener_callback,
+            1)
+
+        # Publisher for enhanced image
+        self.publisher_ = self.create_publisher(Image, '/bcr_bot/kinect_camera/image_enhanced', 10)
+
+        # Load model
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model = net().to(self.device)
+        model_path = "/home/kaushek/MRob/colcon_ws/thirdparty/dpec_vm/pretrained_weights/VMLL/LSRW.pth"
+        self.model.load_state_dict(torch.load(model_path, map_location=self.device))
+        self.model.eval()
+        self.get_logger().info("VMLL model loaded and ready for enhancement.")
+
+    def listener_callback(self, msg):
+        try:
+            # Convert ROS Image to OpenCV format (BGR)
+            cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+
+            # Enhance image
+            enhanced_image = self.enhance_image(cv_image)
+
+            # Convert back to ROS Image and publish
+            enhanced_msg = self.bridge.cv2_to_imgmsg(enhanced_image, encoding='bgr8')
+            self.publisher_.publish(enhanced_msg)
+
+        except Exception as e:
+            self.get_logger().error(f"Error in image processing: {e}")
+
+    def enhance_image(self, cv_image):
+        height, width, _ = cv_image.shape
+        input_pil = PILImage.fromarray(cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB))
+        
+        # Resize to closest multiple of 8, max 3840x2160
+        new_width = min(width - width % 8, 3840)
+        new_height = min(height - height % 8, 2160)
+        resized = input_pil.resize((new_width, new_height))
+
+        # Transform to tensor
+        trans = transforms.ToTensor()
+        input_tensor = trans(resized).unsqueeze(0).to(self.device)
+
+        with torch.no_grad():
+            t0 = time.time()
+            output_tensor = self.model(input_tensor)
+            t1 = time.time()
+
+        # Convert tensor to numpy image
+        output_np = output_tensor.squeeze(0).cpu().numpy().transpose(1, 2, 0)
+        output_np = np.clip(output_np * 255.0, 0, 255).astype(np.uint8)
+        output_pil = PILImage.fromarray(output_np)
+        output_pil = output_pil.resize((width, height), resample=PILImage.BILINEAR)
+
+        # Convert to OpenCV BGR for ROS publishing
+        output_cv = cv2.cvtColor(np.array(output_pil), cv2.COLOR_RGB2BGR)
+
+        return output_cv
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    enhancer_node = ImageEnhancer()
+    rclpy.spin(enhancer_node)
+    enhancer_node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,36 @@
+[0.011s] Invoking command in '/home/colcon_ws/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --build /home/colcon_ws/build/orbslam3 -- -j16 -l16
+[0.057s] [35m[1mConsolidate compiler generated dependencies of target rgbd[0m
+[0.077s] [ 80%] Built target stereo-inertial
+[0.077s] [ 80%] Built target mono-inertial
+[0.077s] [ 80%] Built target stereo
+[0.077s] [ 80%] Built target mono
+[0.087s] [100%] Built target rgbd
+[0.177s] Invoked command in '/home/colcon_ws/build/orbslam3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --build /home/colcon_ws/build/orbslam3 -- -j16 -l16
+[0.186s] Invoking command in '/home/colcon_ws/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --install /home/colcon_ws/build/orbslam3
+[0.192s] -- Install configuration: ""
+[0.192s] -- Execute custom install script
+[0.192s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/mono
+[0.192s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/mono-inertial
+[0.192s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/rgbd
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/stereo
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/stereo-inertial
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/image_enhancer.py
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/image_enhancer_rgbd.py
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/gridmap_from_ply.py
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/lib/orbslam3/point_cloud_conversion.py
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/ament_index/resource_index/package_run_dependencies/orbslam3
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/ament_index/resource_index/parent_prefix_path/orbslam3
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/environment/ament_prefix_path.sh
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/environment/ament_prefix_path.dsv
+[0.193s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/environment/path.sh
+[0.194s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/environment/path.dsv
+[0.194s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/local_setup.bash
+[0.194s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/local_setup.sh
+[0.194s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/local_setup.zsh
+[0.194s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/local_setup.dsv
+[0.194s] -- Symlinking: /home/colcon_ws/install/orbslam3/share/orbslam3/package.dsv
+[0.203s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/ament_index/resource_index/packages/orbslam3
+[0.203s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/cmake/orbslam3Config.cmake
+[0.204s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/cmake/orbslam3Config-version.cmake
+[0.204s] -- Up-to-date symlink: /home/colcon_ws/install/orbslam3/share/orbslam3/package.xml
+[0.206s] Invoked command in '/home/colcon_ws/build/orbslam3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/colcon_ws/install/turtlebot3_orbslam_bringup:/opt/ros/humble /usr/bin/cmake --install /home/colcon_ws/build/orbslam3
