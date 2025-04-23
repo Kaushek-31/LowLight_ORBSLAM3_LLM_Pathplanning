@@ -144,6 +144,5 @@ ros2 topic pub /user_command std_msgs/String "data: '{
 ### Demonstration Video
 
 A complete video demonstration of the LLM-based navigation system in a simulated low-light environment is available at:
-
-**[Watch Demo]((https://youtu.be/sBrYsaEU58E))**
+https://www.youtube.com/watch?v=sBrYsaEU58E
 
